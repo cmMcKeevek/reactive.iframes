@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -67,19 +67,9 @@
             newFrame.style.width = '100%'; 
             newFrame.marginHeight = '0';
             newFrame.scrolling = "no";
-            //When the iframe has loaded, add the child script into the header.
-            newFrame.onload = function (e) {
-                var childScript = document.createElement('script');
-                childScript.src = '../../dist/reactive.iframes.child.js';
-                childScript.type = 'text/javascript';
-                childScript.id = 'iframe_child_script';
-                childScript.setAttribute('data-frameid', 'iframe-dynamic');
-                //Adding this script in will initialise the reactive.iframes.Child() object on the child iframe
-                this.contentDocument.head.appendChild(childScript);
 
-                //Tell the parent div it is a reactive iframe parent (this step can happen at any point)
-                new reactive.iframes.Parent(asideDiv2, 'iframe-dynamic');
-            }
+            //Tell the parent div it is a reactive iframe parent (this step can happen at any point)
+            new reactive.iframes.Parent(asideDiv2, 'iframe-dynamic');
             //Add the new frame to the document
             asideDiv2.appendChild(newFrame); 
         }

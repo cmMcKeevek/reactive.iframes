@@ -55,7 +55,7 @@ var reactive;
                 }
             };
             return Parent;
-        })();
+        }());
         iframes.Parent = Parent;
     })(iframes = reactive.iframes || (reactive.iframes = {}));
 })(reactive || (reactive = {}));

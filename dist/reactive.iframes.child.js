@@ -56,7 +56,7 @@ var reactive;
                 this.sendMessage('height', this.currentHeight);
             };
             return Child;
-        })();
+        }());
         iframes.Child = Child;
     })(iframes = reactive.iframes || (reactive.iframes = {}));
 })(reactive || (reactive = {}));

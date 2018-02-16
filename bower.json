@@ -9,10 +9,6 @@
   "moduleType": [
     "amd"
   ],
-  "main": [
-    "./dist/reactive.iframes.parent.js",
-    "./dist/reactive.iframes.child.js"
-  ],
   "keywords": [
     "Responsive",
     "IFrames"
